@@ -92,6 +92,14 @@ h1 {
     color: navy;
 }
 
+.fa-times {
+    position: absolute;
+    top: 187px;
+    left: 745px;
+    font-size: 18px;
+    color: navy;
+}
+
 .delete {
     padding: 0;
     border: none;

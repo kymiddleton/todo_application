@@ -17,29 +17,6 @@ $(function () {
       // Get a reference to the tableList element and populate it with tables
       const output = $(outputElement);
 
-      //Testing Render
-      const listItem = $('<div>').addClass('todo');
-
-      const label = $('<label>').addClass('fancy-checkbox');
-      const checkbox = $('<input type="checkbox">')
-        .attr('checked', dataList.todoStatus)
-        .addClass('todoStatus')
-        .attr('data-index', index);
-
-      label.append(checkbox);
-      label.append('<i class="fas fa-check-square checked">');
-      label.append('<i class="far fa-square unchecked">');
-
-      listItem.append(label,
-        $('<span>').text(dataList.todoItem).addClass('list-text'),
-
-        $('<button>')
-          .addClass('delete')
-          .attr('data-index', index)
-          .append('<i>').addClass('fas fa-times')
-      )
-
-      //End Testing
 
       //Based on Activity 22 Reservations.
       // Then display the fields in the HTML (Section Name, Date, URL)

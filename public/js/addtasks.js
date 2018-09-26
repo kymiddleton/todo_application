@@ -34,16 +34,22 @@ $(function () {
 function populateList(data) {
     $('#addTasks').empty();
     data.forEach((e, index) => {
+        const label = $('<label>');
         const listTag = $('<li>');
         const button = $('<button>');
         const textDiv = $('<div>');
         textDiv.addClass('textDiv');
         textDiv.text(e.todoItem);
+        // button.addClass('delete').attr('data-index', index).append('<i>').addClass('fas fa-times');
         button.text('x');
         button.addClass('delete');
         button.attr('data-index', index);
+        // button.append('<i>').addClass('fas fa-times'); //does this work?
         listTag.append(textDiv);
         listTag.append(button);
+        // label.addClass('todoStatus'); //test
+        // label.attr('data-index', index); //test
+        // label.append('<i class="fas fa-check-square checked">'); //test
         $('#addTasks').append(listTag);
         // const label = $('<label>').addClass('fancy-checkbox');
         // const checkbox = $('<input type="checkbox">')
