@@ -1,18 +1,12 @@
-// In this code below we create the Front-end JavaScript which 'POSTS' our form data to our express server.
-// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-// Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-// In this case the associated code 'saves' the data to the table-data.js file or waitinglist-data.js file
-
-// jQuery handler that runs the encapsulated code when the page is ready.
 $(function () {
-    // In this code, jQuery is used to "download" the data from our server
+    const state = {
+        toDoList: [],
+    };
 
-    // Click listener for the submit button
     $('#submit').on('click', function (event) {
         event.preventDefault();
         console.log('Submit works');
 
-        // Here we grab the form elements
         const newTodo = {
             todoItem: $('#todo-input').val().trim()
         };
@@ -34,31 +28,29 @@ $(function () {
 function populateList(data) {
     $('#addTasks').empty();
     data.forEach((e, index) => {
-        const label = $('<label>');
-        const listTag = $('<li>');
-        const button = $('<button>');
-        const textDiv = $('<div>');
-        textDiv.addClass('textDiv');
-        textDiv.text(e.todoItem);
-        // button.addClass('delete').attr('data-index', index).append('<i>').addClass('fas fa-times');
-        button.text('x');
-        button.addClass('delete');
-        button.attr('data-index', index);
-        // button.append('<i>').addClass('fas fa-times'); //does this work?
-        listTag.append(textDiv);
-        listTag.append(button);
-        // label.addClass('todoStatus'); //test
-        // label.attr('data-index', index); //test
-        // label.append('<i class="fas fa-check-square checked">'); //test
-        $('#addTasks').append(listTag);
-        // const label = $('<label>').addClass('fancy-checkbox');
-        // const checkbox = $('<input type="checkbox">')
-        //     .attr('checked', todoStatus)
-        //     .addClass('todoStatus')
-        //     .attr('data-index', index);
+            const listTag = $('<li>');
+            const textDiv = $('<div>');
+            const checkbox = $('<i class="far fa-square unchecked complete">');
+            const button = $('<i class="fas fa-times">');
+
+            listTag.append()
+            listTag.append(checkbox);
+            listTag.append(textDiv);
+            listTag.append(button);
+            
+            textDiv.addClass('textDiv');
+            textDiv.text(e.todoItem);
+
+            // button.text('x');
+            button.addClass('delete');
+            button.attr('data-index', index);
+            
+            $('#addTasks').append(listTag);
+            
     });
-    addDeleteListner();
+    addDeleteListener();
 }
+
 
 function addDeleteListner() {
     $(".delete").on('click', function () {

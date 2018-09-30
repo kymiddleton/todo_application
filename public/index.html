@@ -25,32 +25,23 @@
 
     <div class="box two" id="addItems">
       <div class="wrap">
-        <!-- <div> -->
-          <div class="center">
-
-            <input id="todo-input" type="text" name="todo" class="border" placeholder="Add New Task.." size="60" /> <br>
-
-            <button id="submit" class="add todo submit"><i class="fas fa-share"></i>Submit</button>
-          </div>
-
-          <div id="todos">
-
-          </div>
-          <div class="card-body">
-            <ul id="taskList" class="list-group"></ul>
-          </div>
-          <div class="card-body">
-            <ul id="addTasks" class="list-group"></ul>
-          </div>
+        <!-- <div class="center"> -->
+          <form>
+            <input id="todo-input" type="text" name="todo" class="border" placeholder="Add New Task.." /> <br>
+            <!-- <button id="submit" class="add todo submit"><i class="fas fa-share"></i></button> -->
+            <div id="submit"><i class="fa fa-share"></i></div>
+          </form>
         <!-- </div> -->
+        <div id="todos" class="content"></div>
+        
+        <div class="card-body">
+          <ul id="addTasks" class="list-group"></ul>
+        </div>
       </div>
     </div>
-
-
   </div>
 
   <script src="/js/tasklist.js"></script>
   <script src="/js/addtasks.js"></script>
 </body>
-
 </html>

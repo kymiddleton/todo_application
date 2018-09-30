@@ -17,17 +17,6 @@ $(function () {
       // Get a reference to the tableList element and populate it with tables
       const output = $(outputElement);
 
-
-      //Based on Activity 22 Reservations.
-      // Then display the fields in the HTML (Section Name, Date, URL)
-      // const listItem = $("<li class='list-group-item mt-4'>");
-
-      // listItem.append(
-      //   $("<h2>").text("ID: " + dataList[i].todoItem),
-      //   $("<h2>").text("ID: " + dataList[i].todoStatus)
-
-      // );
-
       output.append(listItem);
     }
   }
