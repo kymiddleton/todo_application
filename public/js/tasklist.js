@@ -1,4 +1,3 @@
-// jQuery handler that runs the encapsulated code when the page is ready.
 $(function () {
   // In this code, jQuery is used to "download" the data from our server
   // We then dynamically display this content in our table. This is very similar to the group projects you just completed.

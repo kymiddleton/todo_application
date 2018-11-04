@@ -35,6 +35,8 @@ function populateList(data) {
 
             listTag.append()
             listTag.append(checkbox);
+            addUpdateListener(checkbox);
+
             listTag.append(textDiv);
             listTag.append(button);
             
@@ -51,8 +53,35 @@ function populateList(data) {
     addDeleteListener();
 }
 
+function toggleCheckbox (element) {
+    if($(element).hasClass('fa-square')){
+    $(element).removeClass('fa-square');
+    $(element).addClass('fa-check-square');
+    }else {
+        $(element).removeClass('fa-check-square');
+        $(element).addClass('fa-square');
+    }
+}
 
-function addDeleteListner() {
+function addUpdateListener (element) {
+    $(element).on('click', function () {
+        toggleCheckbox(this);
+    })
+    let descriptionTag = $(element).siblings("div").first();
+    let text = descriptionTag.text();
+    const addtasksArray = 
+        {
+            todoItem: text,
+            todoStatus: false
+        }
+    ;
+    
+    $.post('/api/update/todo_list', addtasksArray).then(function(data){
+        populateList(data); //Don't think this works....
+    }) 
+}
+
+function addDeleteListener() {
     $(".delete").on('click', function () {
         const deleteThisIndex = {
             index: $(this).attr('data-index')

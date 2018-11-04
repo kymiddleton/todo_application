@@ -5,7 +5,7 @@ body {
 }
 
 .one {
-    width: 100%;
+    width: 150%;
     height: 100px;
     text-align: left;
     background-image: linear-gradient(to right, #dd0495 14%,#aa06e5 83%);
@@ -99,7 +99,6 @@ li {
     padding: 10px;
     color: black;
     text-align: left;
-
     background-color:#f0f0f0; 
     border-radius: 10px;
     margin-bottom: 10px;
@@ -117,16 +116,28 @@ li {
     margin-left: 10px;
     font-size: 25px;
 }
+
+/* .item {
+    position: relative;
+    padding: 20px;
+} */
+
 .fa-share {
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
     /* display: inline-grid; */
-    /* margin-left: 600px; */
+    margin-left: 600px;
     top: 165px;
     left: 670px;
     font-size: 25px;
     color: navy;
 }
 
+.fa-check-square {
+    color: navy;
+    margin-left: 10px;
+    font-size: 25px;
+}
 
 /* #todo-input {
     height: 25px;
@@ -192,8 +203,13 @@ li {
 } */
 
 @media only screen and (max-width: 600px) {
+    
     .wrap {
         border: none;
     }
     
+    /* .one {
+        width: 700px;
+    } */
+
 }
