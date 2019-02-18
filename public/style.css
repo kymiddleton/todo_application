@@ -2,6 +2,7 @@ body {
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    background-color: white;
 }
 
 .one {
@@ -32,12 +33,6 @@ h1 {
     background-clip: content-box, border-box;
 }
 
-/* .center {
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-} */
-
 form {
     display: block;
     text-align: left;
@@ -46,17 +41,19 @@ form {
 
 input {
     display: grid;
+    align-content: center;
     border-radius: 20px;
     border-color: #dd0495;
     border-width: 1px;
     background-color: #f0f0f0;
-    width: 550px;
-    height: 25px;
+    width: 540px;
+    height: 40px;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 40px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding-left: 10px;
 }
 
 #submit {
@@ -117,11 +114,6 @@ li {
     font-size: 25px;
 }
 
-/* .item {
-    position: relative;
-    padding: 20px;
-} */
-
 .fa-share {
     position: relative;
     /* position: absolute; */
@@ -139,68 +131,6 @@ li {
     font-size: 25px;
 }
 
-/* #todo-input {
-    height: 25px;
-    border-color: #dd0495;
-    border-radius: 20px;
-    border-width: 1px;
-    margin-top: 30px;
-    background-color: #f0f0f0;
-} */
-
-
-
-
-/* #submit {
-    display: inline-block;
-    /* position: relative; */
-    /* margin-left: 417px;
-    top: -30;
-    color: navy;
-    background-color: transparent;
-    border: none;
-    font-size: 25px;
-} */ */
-
-
-
-
-/* .card-body {
-    margin-left: 35px;
-    display: grid;
-    grid-template-rows: auto;
-    grid-gap: 20px;
-    color: black;
-} */
-
-
-
-/* .fas {
-    font-size: 18px;
-    color: navy;
-} */
-
-/* .far {
-    font-size: 18px;
-    color: navy;
-} */
-
-/* .fa-times {
-    position: absolute;
-    top: 316px;
-    left: 655px;
-    font-size: 18px;
-    color: navy;
-} */
-
-/* .delete {
-    padding: 0;
-    border: none;
-    font: inherit;
-    background-color: transparent;
-    cursor: pointer;
-    color: rgb(52, 65, 132);
-} */
 
 @media only screen and (max-width: 600px) {
     
